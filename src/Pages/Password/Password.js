@@ -19,6 +19,7 @@ export default function Password(){
             timer: 1500
         })
     }
+
     
     return(
         <div className={styles.password}>

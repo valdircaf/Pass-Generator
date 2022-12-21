@@ -46,12 +46,7 @@ export default function Generator(){
 
         let pass = [];
 
-        if(char === 0){
-            swal({
-                icon: 'error',
-                title: 'Oops, parece que você esqueceu de inserir um valor.'
-            })
-        }
+        
     
         for(let i=0; i<=char; i++){
 
@@ -125,7 +120,12 @@ export default function Generator(){
                     icon: 'error',
                     title: 'Oops, parece que você esqueceu de inserir um valor.'
                 })
-               } else{
+               } else if(charValue > 20){
+                swal({
+                    icon: 'error',
+                    title: 'Digite um valor menor do que 20'
+                })
+            } else{
                 navigate('/password')
                }
             }}>
